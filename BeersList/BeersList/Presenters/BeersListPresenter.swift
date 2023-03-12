@@ -1,0 +1,76 @@
+//
+//  BeerListPresenter.swift
+//  BeersList
+//
+//  Created by Alejandro Arce on 9/3/23.
+//
+
+import Foundation
+
+protocol BeersListPresenterDelegate {
+    func sendBeers(beers : [BeerModel])
+    func activateNextButton()
+    func hideNextButton()
+    func activatePreviousButton()
+    func hidePreviousButton()
+    
+}
+
+class BeersListPresenter {
+    var delegate : BeersListPresenterDelegate?
+    var beers : [BeerModel] = []
+    var pageNumber: String = String(1)
+    var foodNameVar: String = ""
+    
+    func managePageButtons() {
+        if beers.count == 25 {
+            delegate?.activateNextButton()
+        } else {
+            delegate?.hideNextButton()
+        }
+        if let pageNumberInt = Int(pageNumber), pageNumberInt == 1 {
+            delegate?.hidePreviousButton()
+        }
+    }
+    func goToNextPage() {
+        if var pageNumberInt = Int(pageNumber) {
+            pageNumberInt += 1
+            pageNumber = String(pageNumberInt)
+            getBeers(foodName: foodNameVar, pageNumber: pageNumber)
+        }
+        delegate?.activatePreviousButton()
+    }
+    func goToPreviousPage() {
+        if var pageNumberInt = Int(pageNumber) {
+            pageNumberInt -= 1
+            pageNumber = String(pageNumberInt)
+            getBeers(foodName: foodNameVar, pageNumber: pageNumber)
+        }
+    }
+    func getBeers(foodName : String, pageNumber: String) {
+        foodNameVar = foodName
+        BeerApi.fetchBeerByFood(foodName: foodName, pageNumber: pageNumber) { result in
+            switch result {
+                
+            case .success(let json):
+                self.beers = json
+                self.managePageButtons()
+                self.delegate?.sendBeers(beers: json)
+                print("Descarga correcta")
+            case .failure(let error):
+                print(error.localizedDescription)
+                switch error {
+                    
+                case .missingData:
+                    print("Missing Data")
+                case .codeError:
+                    print("Code Error")
+                case .timeOut:
+                    print("Time Out")
+                case .defaultError:
+                    print("Default Error")
+                }
+            }
+        }
+    }
+}
