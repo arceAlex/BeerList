@@ -23,13 +23,13 @@ class BeersListPresenter {
     var foodNameVar: String = ""
     
     func managePageButtons() {
+        delegate?.hideNextButton()
+        delegate?.hidePreviousButton()
         if beers.count == 25 {
             delegate?.activateNextButton()
-        } else {
-            delegate?.hideNextButton()
         }
-        if let pageNumberInt = Int(pageNumber), pageNumberInt == 1 {
-            delegate?.hidePreviousButton()
+        if pageNumber != "1" {
+            delegate?.activatePreviousButton()
         }
     }
     func goToNextPage() {
@@ -38,11 +38,11 @@ class BeersListPresenter {
             pageNumber = String(pageNumberInt)
             getBeers(foodName: foodNameVar, pageNumber: pageNumber)
         }
-        delegate?.activatePreviousButton()
     }
     func goToPreviousPage() {
         if var pageNumberInt = Int(pageNumber) {
             pageNumberInt -= 1
+            if pageNumberInt < 1 { pageNumberInt = 1 }
             pageNumber = String(pageNumberInt)
             getBeers(foodName: foodNameVar, pageNumber: pageNumber)
         }

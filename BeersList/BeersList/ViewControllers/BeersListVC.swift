@@ -11,7 +11,6 @@ class BeersListVC: UIViewController {
     var beersListView = BeersListView()
     var beersListPresenter = BeersListPresenter()
     var beers : [BeerModel]?
-    var delayTimeToSearch : Double = 0.1
     var pageNumber : String = String(1)
     
     override func viewDidLoad() {
@@ -36,17 +35,6 @@ class BeersListVC: UIViewController {
     @objc func nextButtonTapped() {
         beersListPresenter.goToNextPage()
     }
-//    @objc func searchFieldDidChange(_ textField : UITextField) {
-//        guard let foodToSearch = textField.text, textField.text?.isEmpty == false else {
-//            return
-//        }
-//        let actualText = textField.text
-//        DispatchQueue.main.asyncAfter(deadline: .now() + delayTimeToSearch){
-//            if actualText == textField.text {
-//                self.searchByFood(food: foodToSearch.replacingOccurrences(of: " ", with: "_"),pageNumber: self.pageNumber)
-//            }
-//        }
-//    }
     @objc func searchFieldDidChange(_ textField : UITextField) {
         beersListPresenter.pageNumber = String(1)
         guard let foodToSearch = textField.text, textField.text?.isEmpty == false else {
@@ -54,7 +42,7 @@ class BeersListVC: UIViewController {
         }
         
         let actualText = textField.text
-        DispatchQueue.main.asyncAfter(deadline: .now() + delayTimeToSearch){
+        DispatchQueue.main.asyncAfter(deadline: .now() + AppConstants.DELAYTIMETOSEARCH){
             if actualText == textField.text {
                 self.searchByFood(food: foodToSearch.replacingOccurrences(of: " ", with: "_"),pageNumber: self.pageNumber)
             }

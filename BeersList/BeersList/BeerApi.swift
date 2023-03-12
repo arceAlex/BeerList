@@ -24,7 +24,8 @@ class BeerApi {
         components.path = "/v2/beers"
         components.queryItems = [
             URLQueryItem(name: "food", value: foodName),
-            URLQueryItem(name: "page", value: pageNumber)
+            URLQueryItem(name: "page", value: pageNumber),
+            URLQueryItem(name: "per_page", value: AppConstants.BEERSPERPAGE)
         ]
         
         let url = components.url!

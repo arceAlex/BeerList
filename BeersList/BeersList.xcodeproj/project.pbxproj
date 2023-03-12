@@ -23,6 +23,7 @@
 		ACA91B6329BA5E0400D4AAC8 /* BeerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6229BA5E0400D4AAC8 /* BeerApi.swift */; };
 		ACA91B6529BA5E6200D4AAC8 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6429BA5E6200D4AAC8 /* BeerModel.swift */; };
 		ACA91B6729BC925000D4AAC8 /* BeerDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6629BC925000D4AAC8 /* BeerDetailPresenter.swift */; };
+		ACA91B6D29BE6EF700D4AAC8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6C29BE6EF700D4AAC8 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		ACA91B6229BA5E0400D4AAC8 /* BeerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerApi.swift; sourceTree = "<group>"; };
 		ACA91B6429BA5E6200D4AAC8 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
 		ACA91B6629BC925000D4AAC8 /* BeerDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailPresenter.swift; sourceTree = "<group>"; };
+		ACA91B6C29BE6EF700D4AAC8 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		ACA91B2329BA4C5300D4AAC8 /* BeersList */ = {
 			isa = PBXGroup;
 			children = (
+				ACA91B6C29BE6EF700D4AAC8 /* AppConstants.swift */,
 				ACA91B2629BA4C5300D4AAC8 /* SceneDelegate.swift */,
 				ACA91B2429BA4C5300D4AAC8 /* AppDelegate.swift */,
 				ACA91B6229BA5E0400D4AAC8 /* BeerApi.swift */,
@@ -317,6 +320,7 @@
 				ACA91B5929BA530C00D4AAC8 /* BeersListView.swift in Sources */,
 				ACA91B6329BA5E0400D4AAC8 /* BeerApi.swift in Sources */,
 				ACA91B5B29BA532500D4AAC8 /* BeersListPresenter.swift in Sources */,
+				ACA91B6D29BE6EF700D4AAC8 /* AppConstants.swift in Sources */,
 				ACA91B5F29BA5CBD00D4AAC8 /* BeerDetailView.swift in Sources */,
 				ACA91B2729BA4C5300D4AAC8 /* SceneDelegate.swift in Sources */,
 				ACA91B6129BA5CCB00D4AAC8 /* BeerDetailVC.swift in Sources */,
