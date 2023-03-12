@@ -15,15 +15,15 @@ final class BeersListTests: XCTestCase {
     var sutDelegate = BeersListVCMock()
     
     func test_GetAllBeersOk() {
-        let stubPath = OHPathForFile("stub.json", type(of: self))!
+        let stubPath = OHPathForFile("stubJson.json", type(of: self))!
         jsonStub = stub(condition: isHost("api.punkapi.com")) { _ in
             return HTTPStubsResponse(fileAtPath: stubPath, statusCode: 200, headers: nil)
         }
         sutBeersListPresenter.delegate = sutDelegate
-        sutBeersListPresenter.getBeers(foodName: "", pageNumber: "")
+        sutBeersListPresenter.getBeers(foodName: "bee", pageNumber: "1")
         sutDelegate.expGetSendBeers = expectation(description: "get beers")
         waitForExpectations(timeout: 10.0)
-        XCTAssertTrue(sutBeersListPresenter.beers.count > 10)
+        XCTAssertTrue(sutBeersListPresenter.beers.count == 3)
     }
     
     override func setUpWithError() throws {
@@ -58,7 +58,7 @@ final class BeersListTests: XCTestCase {
 
 class BeersListVCMock : BeersListPresenterDelegate {
     var expGetSendBeers: XCTestExpectation?
-    func sendBeers(beers: [BeersList.BeerModel]) {
+    func sendBeers(beers: [BeerModel]) {
         expGetSendBeers?.fulfill()
     }
     

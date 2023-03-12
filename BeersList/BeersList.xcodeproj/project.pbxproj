@@ -24,7 +24,7 @@
 		ACA91B6329BA5E0400D4AAC8 /* BeerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6229BA5E0400D4AAC8 /* BeerApi.swift */; };
 		ACA91B6529BA5E6200D4AAC8 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6429BA5E6200D4AAC8 /* BeerModel.swift */; };
 		ACA91B6729BC925000D4AAC8 /* BeerDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA91B6629BC925000D4AAC8 /* BeerDetailPresenter.swift */; };
-		ACA91B6929BE5F9900D4AAC8 /* stub.json in Resources */ = {isa = PBXBuildFile; fileRef = ACA91B6829BE5F9900D4AAC8 /* stub.json */; };
+		ACA91B6929BE5F9900D4AAC8 /* stubJson.json in Resources */ = {isa = PBXBuildFile; fileRef = ACA91B6829BE5F9900D4AAC8 /* stubJson.json */; };
 		D5C46E4C8F9DD103A775B87F /* Pods_BeersListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C5FEA28C307F92C0D94F4A /* Pods_BeersListTests.framework */; };
 		DB9F12F52D4486B8719A87CE /* Pods_BeersList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB0736A3F6806B83EFD3D3E /* Pods_BeersList.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +71,7 @@
 		ACA91B6229BA5E0400D4AAC8 /* BeerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerApi.swift; sourceTree = "<group>"; };
 		ACA91B6429BA5E6200D4AAC8 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
 		ACA91B6629BC925000D4AAC8 /* BeerDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailPresenter.swift; sourceTree = "<group>"; };
-		ACA91B6829BE5F9900D4AAC8 /* stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stub.json; path = ../../../stub.json; sourceTree = "<group>"; };
+		ACA91B6829BE5F9900D4AAC8 /* stubJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = stubJson.json; path = ../../../stubJson.json; sourceTree = "<group>"; };
 		C4A3F137391D1D26758B1C30 /* Pods-BeersList-BeersListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeersList-BeersListUITests.release.xcconfig"; path = "Target Support Files/Pods-BeersList-BeersListUITests/Pods-BeersList-BeersListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D5FD1352FC34ABF5391D7C22 /* Pods_BeersList_BeersListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeersList_BeersListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA13625BAFEE794085B15B7F /* Pods-BeersList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeersList.debug.xcconfig"; path = "Target Support Files/Pods-BeersList/Pods-BeersList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		ACA91B3A29BA4C5B00D4AAC8 /* BeersListTests */ = {
 			isa = PBXGroup;
 			children = (
-				ACA91B6829BE5F9900D4AAC8 /* stub.json */,
+				ACA91B6829BE5F9900D4AAC8 /* stubJson.json */,
 				ACA91B3B29BA4C5B00D4AAC8 /* BeersListTests.swift */,
 			);
 			path = BeersListTests;
@@ -340,7 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA91B6929BE5F9900D4AAC8 /* stub.json in Resources */,
+				ACA91B6929BE5F9900D4AAC8 /* stubJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
