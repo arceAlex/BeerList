@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import BeersList
+import OHHTTPStubs
 
 final class BeersListTests: XCTestCase {
 
