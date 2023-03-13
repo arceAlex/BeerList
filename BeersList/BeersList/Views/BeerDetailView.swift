@@ -125,7 +125,7 @@ class BeerDetailView : UIView {
             beerImage.heightAnchor.constraint(equalToConstant: 300),
             
             descriptionLabel.topAnchor.constraint(equalTo: beerImage.bottomAnchor, constant: 10),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             descriptionLabel.heightAnchor.constraint(equalToConstant: 20),
             
@@ -135,7 +135,7 @@ class BeerDetailView : UIView {
             beerDescription.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -200),
             
             matchedFoodLabel.topAnchor.constraint(equalTo: beerDescription.bottomAnchor, constant: 10),
-            matchedFoodLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            matchedFoodLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             matchedFoodLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             matchedFoodLabel.heightAnchor.constraint(equalToConstant: 20),
             

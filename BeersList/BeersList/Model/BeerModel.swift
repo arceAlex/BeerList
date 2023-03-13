@@ -8,11 +8,11 @@
 import Foundation
 
 struct BeerModel : Decodable {
-    let name : String
-    let image_url : String
-    let description : String
-    let food_pairing : [String]
-    let abv : Double
+    let name : String?
+    let image_url : String?
+    let description : String?
+    let food_pairing : [String]?
+    let abv : Double?
     let ibu : Double?
     let ebc : Double?
     let srm : Double?

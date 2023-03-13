@@ -76,7 +76,11 @@ extension BeersListVC : UITableViewDataSource {
         }
         let myBeer = beers[indexPath.row]
         cell.beerModel = myBeer
-        cell.beerTitle.text = myBeer.name
+        if let name = myBeer.name {
+            cell.beerTitle.text = name
+        } else {
+            cell.beerTitle.text = "No name available"
+        }
         cell.delegate = self
         return cell
     }
