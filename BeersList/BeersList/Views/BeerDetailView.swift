@@ -11,67 +11,50 @@ import UIKit
 class BeerDetailView : UIView {
     var abvLabel : UILabel = {
         let abvLabel = UILabel()
-        //abvLabel.backgroundColor = .green
-        abvLabel.text = "BEER DESCRIPTION"
         return abvLabel
     }()
     var ibuLabel : UILabel = {
         let ibuLabel = UILabel()
-        //ibuLabel.backgroundColor = .green
-        ibuLabel.text = "BEER DESCRIPTION"
         return ibuLabel
     }()
     var ebcLabel : UILabel = {
         let ebcLabel = UILabel()
-        //ebcLabel.backgroundColor = .green
-        ebcLabel.text = "BEER DESCRIPTION"
         return ebcLabel
     }()
     var srmLabel : UILabel = {
         let srmLabel = UILabel()
-        //srmLabel.backgroundColor = .green
-        srmLabel.text = "BEER DESCRIPTION"
         return srmLabel
     }()
     var phLabel : UILabel = {
         let phLabel = UILabel()
-        //phLabel.backgroundColor = .green
-        phLabel.text = "BEER DESCRIPTION"
         return phLabel
     }()
     var attenuationLabel : UILabel = {
         let attenuationLabel = UILabel()
-        //attenuationLabel.backgroundColor = .green
-        attenuationLabel.text = "BEER DESCRIPTION"
         return attenuationLabel
     }()
     var beerImage : UIImageView = {
         let beerImage = UIImageView()
-        //beerImage.backgroundColor = .green
         beerImage.contentMode = .scaleAspectFit
         return beerImage
     }()
     var descriptionLabel : UILabel = {
         let descriptionLabel = UILabel()
-        //descriptionLabel.backgroundColor = .green
         descriptionLabel.text = "BEER DESCRIPTION"
         return descriptionLabel
     }()
     var beerDescription : UITextView = {
         let beerDescription = UITextView()
         beerDescription.contentOffset = CGPoint(x: 0, y: (beerDescription.contentSize.height - beerDescription.frame.size.height) / 2)
-        //beerDescription.backgroundColor = .green
         return beerDescription
     }()
     var matchedFoodLabel : UILabel = {
         let matchedFoodLabel = UILabel()
-        //matchedFoodLabel.backgroundColor = .green
         matchedFoodLabel.text = "Matched Foods"
         return matchedFoodLabel
     }()
     var foodPairing : UITextView = {
         let foodPairing = UITextView()
-        //foodPairing.backgroundColor = .green
         return foodPairing
     }()
     init() {
@@ -142,7 +125,7 @@ class BeerDetailView : UIView {
             beerImage.heightAnchor.constraint(equalToConstant: 300),
             
             descriptionLabel.topAnchor.constraint(equalTo: beerImage.bottomAnchor, constant: 10),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             descriptionLabel.heightAnchor.constraint(equalToConstant: 20),
             
@@ -152,7 +135,7 @@ class BeerDetailView : UIView {
             beerDescription.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -200),
             
             matchedFoodLabel.topAnchor.constraint(equalTo: beerDescription.bottomAnchor, constant: 10),
-            matchedFoodLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            matchedFoodLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             matchedFoodLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             matchedFoodLabel.heightAnchor.constraint(equalToConstant: 20),
             

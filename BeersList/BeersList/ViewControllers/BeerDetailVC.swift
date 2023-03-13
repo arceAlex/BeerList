@@ -10,7 +10,6 @@ import UIKit
 
 class BeerDetailVC : UIViewController {
     let beerDetailPresenter = BeerDetailPresenter()
-    //var beerModel = BeerModel(name: "", image_url: "",description: "",food_pairing: [], abv: 0,ibu: 0, ebc: 0 )
     var beerModel = BeerModel(name: "", image_url: "", description: "", food_pairing: [], abv: 0, ibu: 0, ebc: 0, srm: 0, ph: 0, attenuation_level: 0)
     let beerDetailView = BeerDetailView()
     var beerImage = UIImage()
@@ -20,15 +19,31 @@ class BeerDetailVC : UIViewController {
         view.backgroundColor = .white
         view.addSubview(beerDetailView)
         beerDetailPresenter.delegate = self
-        self.title = beerModel.name
         setTexts()
         setImage()
         setSafeArea()
     }
     func setTexts(){
-        beerDetailView.beerDescription.text = beerModel.description
-        beerDetailView.foodPairing.text = beerModel.food_pairing.joined(separator: "\n")
-        beerDetailView.abvLabel.text = "abv: \(beerModel.abv)"
+        if let titleBeer = beerModel.name {
+            self.title = titleBeer
+        } else {
+            self.title = "Unknown"
+        }
+        if let description = beerModel.description {
+            beerDetailView.beerDescription.text = description
+        } else {
+            beerDetailView.beerDescription.text = "No description available"
+        }
+        if let foodPairing = beerModel.food_pairing {
+            beerDetailView.foodPairing.text = foodPairing.joined(separator: "\n")
+        } else {
+            beerDetailView.foodPairing.text = "No foods pairing availables"
+        }
+        if let abv = beerModel.abv {
+            beerDetailView.abvLabel.text = "abv: \(abv)"
+        } else {
+            beerDetailView.abvLabel.text = "abv: unknown"
+        }
         if let ibu = beerModel.ibu {
             beerDetailView.ibuLabel.text = "ibu: \(ibu)"
         } else {
@@ -59,7 +74,11 @@ class BeerDetailVC : UIViewController {
         
     }
     func setImage() {
-        beerDetailPresenter.getBeerImage(url: beerModel.image_url)
+        if let imageUrl = beerModel.image_url {
+            beerDetailPresenter.getBeerImage(url: imageUrl)
+        } else {
+            print("No image available")
+        }
     }
     func setSafeArea() {
         beerDetailView.translatesAutoresizingMaskIntoConstraints = false

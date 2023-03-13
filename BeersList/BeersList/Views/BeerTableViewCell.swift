@@ -14,7 +14,6 @@ protocol BeerTableViewCellDelegate {
 
 class BeerTableViewCell : UITableViewCell {
     var delegate : BeerTableViewCellDelegate?
-    //var beerModel = BeerModel(name: "", image_url: "",description: "",food_pairing: [], abv: 0, ibu: 0, ebc: 0)
     var beerModel = BeerModel(name: "", image_url: "", description: "", food_pairing: [], abv: 0, ibu: 0, ebc: 0, srm: 0, ph: 0, attenuation_level: 0)
     lazy var beerTitle : UILabel = {
         let beerTitle = UILabel(frame: CGRect(x: 20, y: 7.5, width: UIScreen.main.bounds.width - 125, height: 30))
