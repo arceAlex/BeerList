@@ -9,5 +9,5 @@ import Foundation
 
 class AppConstants {
     static let BEERSPERPAGE : String = "25"
-    static let DELAYTIMETOSEARCH : Double = 1.0
+    static let DELAYTIMETOSEARCH : Double = 0.5
 }

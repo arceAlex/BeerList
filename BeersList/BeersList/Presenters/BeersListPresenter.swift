@@ -25,7 +25,7 @@ class BeersListPresenter {
     func managePageButtons() {
         delegate?.hideNextButton()
         delegate?.hidePreviousButton()
-        if beers.count == 25 {
+        if beers.count == Int(AppConstants.BEERSPERPAGE) {
             delegate?.activateNextButton()
         }
         if pageNumber != "1" {
