@@ -19,7 +19,6 @@ class BeersListVC: UIViewController {
         self.title = "Beers By Food"
         beersListPresenter.delegate = self
         beersListView.beersTableView.dataSource = self
-        //beersListView.beersTableView.delegate = self
         beersListView.beersTableView.register(BeerTableViewCell.self, forCellReuseIdentifier: "BeerTableViewCell")
         view.addSubview(beersListView)
         beersListView.searchField.addTarget(self, action: #selector(searchFieldDidChange(_:)), for: .editingChanged)

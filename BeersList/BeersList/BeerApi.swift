@@ -59,35 +59,6 @@ class BeerApi {
         }.resume()
     }
     
-//    static func fetchBeerByFood(foodName: String, completion: @escaping(Result<[BeerModel],JsonError>)->Void) {
-//        let url = URL(string: "https://api.punkapi.com/v2/beers?food=\(foodName)")!
-//        URLSession.shared.dataTask(with: url) { data, response, error in
-//            let response = response as? HTTPURLResponse
-//
-//            if let response = response, response.statusCode != 200 && response.statusCode != 408 {
-//                print("Error \(response.statusCode)")
-//                completion(.failure(.codeError))
-//                return
-//            }
-//            if let _ = error {
-//                completion(.failure(.defaultError))
-//                return
-//            }
-//            guard let data = data else {
-//                completion(.failure(.missingData))
-//                return
-//            }
-//            do {
-//                let json = try JSONDecoder().decode([BeerModel].self, from: data)
-//                completion(.success(json))
-//                return
-//            } catch let error {
-//                completion(.failure(.defaultError))
-//                print(error.localizedDescription)
-//                return
-//            }
-//        }.resume()
-//    }
     static func downloadBeerImage (url: URL, completionImage: @escaping(Result<Data,Error>)->Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {

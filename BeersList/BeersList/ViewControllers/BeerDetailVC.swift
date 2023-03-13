@@ -10,7 +10,6 @@ import UIKit
 
 class BeerDetailVC : UIViewController {
     let beerDetailPresenter = BeerDetailPresenter()
-    //var beerModel = BeerModel(name: "", image_url: "",description: "",food_pairing: [], abv: 0,ibu: 0, ebc: 0 )
     var beerModel = BeerModel(name: "", image_url: "", description: "", food_pairing: [], abv: 0, ibu: 0, ebc: 0, srm: 0, ph: 0, attenuation_level: 0)
     let beerDetailView = BeerDetailView()
     var beerImage = UIImage()
